@@ -42,7 +42,7 @@ function App() {
             <div>
               <div className="p-2 rounded-lg ">
 
-                <img src={Img} alt="aizen" className="rounded-lg " />
+                <img src={Img} alt="aizen" className="rounded-lg mx-auto " />
               </div>
               <div className="font-semibold text-gray-700 mt-5">
                 Klik button di bawah untuk menjadi wibu 🤩
