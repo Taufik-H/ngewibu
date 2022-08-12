@@ -60,7 +60,7 @@ function App() {
               </div>
               <div className="p-2 text-left ">
               <div className="flex justify-between">
-              <p className="text-sm font-semibold">Judu  :</p>
+              <p className="text-sm font-semibold">Judul  :</p>
               <div className="">{anime?.title}</div>
               </div>
               <div className="flex justify-between">
