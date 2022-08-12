@@ -29,10 +29,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className="w-80 border rounded-lg h-80 shadow-md mx-auto p-2 mt-32">
+      <div className="w-auto md:w-5/12 border rounded-lg h-auto shadow-md mx-auto p-2 mt-32">
         <div className="w-full h-full border-4 border-blue-400 rounded-lg border-dotted">
           {isFinding ? (
-            <ReactLoading
+            <ReactLoading className="mx-auto "
               type={"spin"}
               color={"black"}
               height={"20%"}
@@ -40,24 +40,39 @@ function App() {
             />
           ) : !isFind ? (
             <div>
+              <div className="p-2 rounded-lg ">
+
+                <img src={Img} alt="aizen" className="rounded-lg " />
+              </div>
               <div className="font-semibold text-gray-700 mt-5">
                 Klik button di bawah untuk menjadi wibu 🤩
               </div>
-              <div className="p-2 rounded-lg">
-                <img src={Img} alt="aizen" className="rounded-lg " />
-              </div>
             </div>
           ) : (
-            <div className="p-2 rounded-lg">
+            <>
+            <div className="bg-white py-2" >
+              
               <img
                 src={anime?.images.jpg.image_url}
-                alt=""
-                className="rounded-lg "
+                alt="image"
+                className="mx-auto object-contain h-48 w-96"
               />
-              <p>{anime?.title}</p>
-              <p>{anime?.rating}</p>
-              <p>{anime?.status}</p>
-            </div>
+              </div>
+              <div className="p-2 text-left ">
+              <div className="flex justify-between">
+              <p className="text-sm font-semibold">Judu  :</p>
+              <div className="">{anime?.title}</div>
+              </div>
+              <div className="flex justify-between">
+              <p className="text-sm font-semibold">Rating  :</p>
+              <div className="">{anime?.rating}</div>
+              </div>
+              <div className="flex justify-between">
+              <p className="text-sm font-semibold">Status  :</p>
+              <div className="">{anime?.status}</div>
+              </div>
+                </div>    
+            </>
           )}
         </div>
       </div>
